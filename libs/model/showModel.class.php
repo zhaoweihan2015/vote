@@ -15,6 +15,12 @@
             }
 			return TRUE;
 		}
+		function addNew(){
+			$name = $_POST['name'];
+			$describetion = $_POST['describetion'];
+			$img = $_POST['img'];
+			echo $name;
+		}
 	}
 	
 	?>

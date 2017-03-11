@@ -13,6 +13,7 @@
     </head>
 
     <body>
+        <!--数组拼接-->
         <?php
 			    while ( $row = $res ->fetch_assoc()) {
 			?>
@@ -26,15 +27,36 @@
                 <div class="votenum">
                     <?php echo $row['votenum'] ?>
                 </div>
-                <input type="checkbox" name="votecheck" value="<?php echo $row['id'] ?>">
+                <input type="checkbox" onclick="return chechchos();" value="<?php echo $row['id'] ?>">
             </div>
             <?php 
           }
 		?>
             <button onclick="chooseVote();">click</button>
+
+
+
             <script type="application/javascript">
+                var chooseinput = document.getElementsByTagName('input');
+                //checkbox选择限制
+                function chechchos() {
+                    var numberchoose = 0;
+                    for (var i = 0; i < chooseinput.length; i++) {
+                        chooseinput[i].onclick = function() {
+                            if (this.checked) {
+                                numberchoose++;
+                            } else {
+                                numberchoose--;
+                            }
+                            if (numberchoose >= 2) {
+                                alert('error');
+                                return false;
+                            }
+                        };
+                    }
+                }
+                //获取选择的id
                 function chooseID() {
-                    var chooseinput = document.getElementsByTagName('input');
                     var id = "";
                     for (var i = 0; i < chooseinput.length; i++) {
                         if (chooseinput[i].checked) {
@@ -44,7 +66,7 @@
                     id = id.substr(0, id.length - 1);
                     return id;
                 }
-
+                //异步请求
                 function chooseVote() {
                     $.ajax({
                         type: "post",

@@ -9,9 +9,13 @@ $type = $_POST['type'];
 	 $model = new showModel();
 	 $model ->chooseLike();
  		break;
- 	
+ 	case 'addNew':
+	 $model = new showModel();
+	 $model ->addNew();
+ 		break;
  	default:
  		
  		break;
  }
+// echo $_POST['type'];
 ?>
