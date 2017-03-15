@@ -1,0 +1,145 @@
+body,
+ul {
+	margin: 0px;
+	list-style: none;
+	padding: 0px;
+}
+
+header {
+	background: black;
+	height: 300px;
+}
+
+nav {
+	background: red;
+	height: 50px;
+}
+
+article {
+	background: #2e272e;
+	height: 1000px;
+}
+
+footer {
+	background: black;
+	height: 300px;
+}
+
+.main {
+	width: 1200px;
+	margin: 0 auto;
+	height: auto;
+	padding-top: 30px;
+	overflow: hidden;
+}
+.main>ul>li{
+	height: 200px;
+	width: 50%;
+	float: left;
+	overflow: hidden;
+}
+.main>ul>li>ul{
+	width:50%;
+	float: left;
+}
+.main>ul>li>ul>.leftLi{
+	width: 132px;
+	height: 160px;
+	background:#4b4350;
+	border-radius: 8px;
+	overflow: hidden;
+	border-radius: 8px;
+	margin: 0 auto;
+}
+.leftLi>span{
+	text-align: center;
+	display: block;
+	color: white;
+}
+.leftLi>img{
+	border-radius: 8px;
+	border:2px solid white;
+	height: 128px;
+	width: 128px;
+}
+.main>ul>li>ul>li{
+	margin-bottom: 10px;
+	height: 25px;
+	width: auto;
+}
+/*check选项*/
+.votecheck {
+	width: auto;
+	height: 25px;
+	border-radius: 3px;
+	float: left;
+}
+.oText{
+	width: 210px;
+	border-radius: 8px;
+	border: 4px dotted white;
+	height:72px;
+	color: lightgray;
+	font-style: italic;
+	text-indent: 1em;
+	line-height: 20px;
+	padding: 5px;
+}
+.votecheck .votechecknum,.votenum{
+	overflow: hidden;
+	width: 30px;
+	height: 25px;
+	line-height: 28px;
+	text-align: center;
+	float: left;
+	font-family: "Mouse";
+	color: white;
+}
+.votecheck>ul>li {
+	width: 15px;
+	background: url(../img/votecheck_bg.gif);
+	border-radius: 4px;
+	height: 25px;
+	margin-right: 1px;
+	float: left;
+}
+
+.votecheck>ul {
+	float: left;
+	width: 160px;
+	height: 25px;
+}
+
+.del,
+.add {
+	float: left;
+	font-weight: bolder;
+	width: 25px;
+	height: 25px;
+	background: url(../img/adddelbg.png) no-repeat;
+	background-size: auto 25px;
+}
+
+.del {
+	background-position-x: -25px;
+}
+
+.voteShow {
+	width: 210px;
+	height: 25px;
+	overflow: hidden;
+	border-radius: 7px;
+	background: white;
+	z-index: 99;
+	float: left;
+}
+.leftbox {
+	transform: translateX(-300px);
+	height: 25px;
+	width: 300px;
+	background: url(../img/voteShowBg.jpg);
+	transition: transform 1s;
+	background-size: auto 25px;
+	border-radius: 7px;
+	z-index: 1;
+}

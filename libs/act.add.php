@@ -80,15 +80,16 @@
     </div>
     <div class="addclass">
         <ul>
-            <form action="controller/showController.class.php" method="POST">
+            <form action="controller/showController.class.php" method="POST"  enctype="multipart/form-data">
                 <input type="hidden" name="type" value="addNew">
-                <li>
-                    IMG:<br>
-                    <input type="file" name="img" value="">
-                </li>
                 <li>
                     NAME:<br>
                     <input id="name" type="text" name="name" value="">
+                </li>
+                <li>
+                    IMG:<br>
+                    <input type="file" name="file" value=""><br />
+                    图片最好为128X128（px），没有缩略图和裁剪系统，注意尺寸
                 </li>
                 <li>
                     DESCRIBE: <br>
@@ -120,6 +121,7 @@
              <td><?php echo $row['describetion']?></td>
              <td><?php echo $row['votenum']?></td>
              <td><?php if($row['promotion']){echo "YES";}else{echo "NO";}   ?></td>
+             <td><a>删除</a></td>
          </tr>
          <?php 
           }
