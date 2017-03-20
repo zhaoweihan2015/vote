@@ -1,91 +1,137 @@
-body,
-ul {
+body{
 	margin: 0px;
-	list-style: none;
 	padding: 0px;
+	background: #2e272e;
 }
-
 header {
 	background: black;
 	height: 300px;
 }
-
-nav {
-	background: red;
-	height: 50px;
+ul{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
 }
-
 article {
-	background: #2e272e;
-	height: 1000px;
+	overflow: hidden;
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
 footer {
 	background: black;
 	height: 300px;
 }
-
 .main {
-	width: 1200px;
+	width: 100%;
 	margin: 0 auto;
-	height: auto;
-	padding-top: 30px;
-	overflow: hidden;
-}
-.main>ul>li{
+	padding-top: 20px;
+	}
+
+.main>div {
 	height: 200px;
+}
+
+.row>div>ul {
 	width: 50%;
 	float: left;
-	overflow: hidden;
 }
-.main>ul>li>ul{
-	width:50%;
-	float: left;
-}
-.main>ul>li>ul>.leftLi{
-	width: 132px;
+
+.row>div>ul>.leftLi {
+	width: 130px;
 	height: 160px;
-	background:#4b4350;
+	background: #4b4350;
 	border-radius: 8px;
 	overflow: hidden;
 	border-radius: 8px;
 	margin: 0 auto;
 }
-.leftLi>span{
+
+.leftLi>span {
 	text-align: center;
 	display: block;
 	color: white;
 }
-.leftLi>img{
+
+.leftLi>img {
 	border-radius: 8px;
-	border:2px solid white;
+	border: 2px solid white;
 	height: 128px;
 	width: 128px;
 }
-.main>ul>li>ul>li{
+
+.row>div>ul>li {
 	margin-bottom: 10px;
 	height: 25px;
 	width: auto;
 }
+
+
+/*aside*/
+
+aside {
+	position: fixed;
+	height: 200px;
+	width: 120px;
+	background: grey;
+	top: 50%;
+	margin-top: -100px;
+	right: 0px;
+	z-index: 999;
+	transition: transform .8s;
+	-moz-transition: transform .8s;
+	-webkit-transition: transform .8s;
+	-o-transition: transform .8s;
+	transform: translateX(100px);
+}
+aside:hover{
+	transform: translateX(0px);
+}
+#showList li{
+	height: 30px;
+	width: 120px;
+}
+#showList ul li a,#showList ul li i{
+	line-height: 30px;
+	color: white;
+}
+#showList ul{
+	height: 200px;
+	float: left;
+	width: 100px;
+}
+.asideLeft{
+	height: 200px;
+	float: left;
+	width: 20px;
+	line-height: 200px;
+}
+.asideLeft i{
+	color: white;
+}
 /*check选项*/
+
 .votecheck {
 	width: auto;
 	height: 25px;
 	border-radius: 3px;
 	float: left;
 }
-.oText{
+
+.oText {
 	width: 210px;
 	border-radius: 8px;
 	border: 4px dotted white;
-	height:72px;
+	height: 72px;
 	color: lightgray;
 	font-style: italic;
 	text-indent: 1em;
 	line-height: 20px;
 	padding: 5px;
 }
-.votecheck .votechecknum,.votenum{
+
+.votecheck .votechecknum,
+.votenum {
 	overflow: hidden;
 	width: 30px;
 	height: 25px;
@@ -95,6 +141,7 @@ footer {
 	font-family: "Mouse";
 	color: white;
 }
+
 .votecheck>ul>li {
 	width: 15px;
 	background: url(../img/votecheck_bg.gif);
@@ -133,6 +180,7 @@ footer {
 	z-index: 99;
 	float: left;
 }
+
 .leftbox {
 	transform: translateX(-300px);
 	height: 25px;
@@ -143,3 +191,4 @@ footer {
 	border-radius: 7px;
 	z-index: 1;
 }
+
